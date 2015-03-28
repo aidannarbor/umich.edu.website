@@ -875,6 +875,16 @@ display:block;
 #footer-inside { width: 960px; margin: 0 auto; } 
 
 .footer-area { width:280px; float:left; padding:0 50px 0 0; }
+.footer-area   a {
+	color: #fff;
+}
+.footer-area   a:visited {
+	color: #999;
+}
+
+.footer-area   a:hover, .footer-area   a:focus, .footer-area   a:active  {
+	color: #000;
+}
 
 .footer-area.first { width:280px;}
 
