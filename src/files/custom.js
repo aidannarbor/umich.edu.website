@@ -3,7 +3,9 @@ jQuery(window).load(function() {
   jQuery('#slidebox').flexslider({
         animation: "fade",
         directionNav:true,
-        controlNav:false
+        controlNav:false,
+  	pauseOnAction: true,
+  	pauseOnHover: true
       });
     
     

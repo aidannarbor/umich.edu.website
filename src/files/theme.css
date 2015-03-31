@@ -841,6 +841,19 @@ display:block;
 	color:#eee;
 }
 
+@media screen and (max-width: 1180px) {
+	.right-float-banner {
+		display:none;
+	}
+}
+
+.long-name {
+	display: block;
+}
+.short-name {
+	display: none;
+}
+
 @media screen and (max-width: 768px) {
 	html{
 		font-size: 60%;
@@ -865,7 +878,19 @@ display:block;
 	.portbox, .postbox{
 		margin-bottom: 30px;
 	}
+	.short-name {
+		display: block;
+	}
+	.long-name {
+		display: none;
+	}
 
+	.disappear-on-mobile {
+		display: none;
+	}
+	.smaller-on-mobile {
+		height: 40px;
+	}
 }
 
 /*

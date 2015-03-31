@@ -97,7 +97,7 @@ only screen and (min-resolution: 192dpi) {
 #header-inside { margin: 0 auto; padding:12px 0 0px 30px; overflow:hidden; } 
 
 #header-inside-left { float:left; width: 800px; padding:0 0px 0 0; margin:0; }
-.edit1 {float:left;margin-right:30px; }
+.edit1 {float:left;margin-right:30px;margin-bottom:10px }
 
 #header-inside-right { float:right; width: 150px; padding:0; }
 </style>
@@ -106,10 +106,18 @@ only screen and (min-resolution: 192dpi) {
   <div id="header-inside">
     <div id="header-inside-left">
 
-      <a href="index.html" title="Home"><img class="edit1" src="files/aid_0.png" alt="Home"></a>
-      <span style="color:orange;font-size:24px;">Association for</span><span style="color:white;font-size:24px;"> India's</span><span style="color:green;font-size:24px;"> Development</span><span style="color:white;font-size:20px;"> - Ann Arbor Chapter</span><br>
+      <a  href="index.html" title="Home"><img class="edit1 smaller-on-mobile" src="files/aid_0.png" alt="Home"></a>
+      <div class="long-name" >
+      <span style="color:orange;font-size:24px;">Association for</span><span style="color:white;font-size:24px;"> India's</span><span style="color:green;font-size:24px;"> Development</span><span style="color:white;font-size:20px;"> - Ann Arbor Chapter</span>
+    </div>
+    <div class="short-name">
+      <span style="color:orange;font-size:24px;">AID</span><span
+    style="color:white;font-size:24px;"> Ann</span><span
+  style="color:green;font-size:24px;"> Arbor</span>
+    </div>
+    <div class="disappear-on-mobile" >
       <span style="color:orange;font-size:16px;">Courage </span>|<span style="color:white;font-size:16px;">  Commitment </span>|<span style="color:green;font-size:16px;"> Change</span>
-      <br/>
+    </div>
     <div id="submenu" class="topmenu"><ul id="topmenu" class="sfmenu
         sf-js-enabled sf-shadow"><li id="menu-home" class="menu-item
         menu-item-type menu-item-object menu-item-home menu-item-12"><a href="index.html">Home</a></li>
@@ -146,7 +154,7 @@ only screen and (min-resolution: 192dpi) {
 
     </div>
 
-    <div id="header-inside-right">
+    <div id="header-inside-right" class="right-float-banner">
       <div class="region region-search-area">
         <div id="block-block-5" class="block block-block">
 
