@@ -841,9 +841,13 @@ display:block;
 	color:#eee;
 }
 
-@media screen and (max-width: 1180px) {
+.right-float-banner {
+	display: none;
+}
+
+@media screen and (min-width: 1200px) {
 	.right-float-banner {
-		display:none;
+		display:block;
 	}
 }
 
