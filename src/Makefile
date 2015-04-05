@@ -1,5 +1,5 @@
 BUILDDIR=../build
-all: ../build/index.html ../build/events.html ../build/projects.html ../build/getinvolved.html ../build/about-us.html ../build/apna-skool.html ../build/project-sec.html ../build/snehibhavan.html ../build/gallery.html copy_files
+all: ../build/index.html ../build/events.html ../build/projects.html ../build/getinvolved.html ../build/about-us.html ../build/apna-skool.html ../build/project-sec.html ../build/snehibhavan.html ../build/gallery.html ../build/project-mukti.html copy_files
 
 HTMLPARTS=header.html sidebar.html footer.html
 
