@@ -253,7 +253,9 @@ img.colorgrayed {
 	text-align: center;
 	z-index: 120;
 	color: #fff;
-    text-shadow: 3px 3px 3px #333;
+    border-radius: 10px;
+    background-color:rgba(5,5,5,0.5);
+    text-shadow: 5px 5px 3px #000;
 }	
 	
 .flex-caption h2{
