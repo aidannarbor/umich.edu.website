@@ -6,9 +6,15 @@ HTMLPARTS=header.html sidebar.html footer.html
 ../build/%.html: %.jinja $(HTMLPARTS)
 	python ../scripts/jinja2html.py $< $@ $(HTMLPARTS)
 
-copy_files:
+copy_files: $(BUILDDIR)/fonts $(BUILDDIR)/events_files $(BUILDDIR)/index_files
 	rsync -ruE files/ ../build/files/
-	ln -s files $(BUILDDIR)/fonts; /bin/true
-	ln -s files $(BUILDDIR)/events_files; /bin/true
-	ln -s files $(BUILDDIR)/index_files; /bin/true
+
+$(BUILDDIR)/fonts:
+	ln -s files $@
+
+$(BUILDDIR)/events_files:
+	ln -s files $@
+
+$(BUILDDIR)/index_files:
+	ln -s files $@
 
