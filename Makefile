@@ -1,17 +1,23 @@
 
 SUBDIRS = src
 TARGET = build
+USER?="tell-me-your-username"
 
 .PHONY: subdirs $(SUBDIRS)
 
-subdirs: $(SUBDIRS)
+subdirs: $(SUBDIRS) venv/bin/activate
 
-$(SUBDIRS):
+venv/bin/activate:
+	virtualenv --python=python3 venv
+	. venv/bin/activate && pip install jinja2
+
+$(SUBDIRS): venv/bin/activate
 	@mkdir -p $(TARGET)
-	 $(MAKE) -C $@
+	 . venv/bin/activate && $(MAKE) -C $@
 
 install-umich: subdirs
-	rsync -rcavz build/ sftp.itd.umich.edu:/afs/umich.edu/group/soas/aidindia/Public/html/
+	#rsync --delete -arcvz build/ $(USER)@sftp.itd.umich.edu:/afs/umich.edu/group/soas/aidindia/Public/html/
+	rsync --delete -arcvz build/ $(USER)@login.itd.umich.edu:/afs/umich.edu/group/soas/aidindia/Public/html/
 
 install: install-umich
 

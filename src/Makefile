@@ -4,7 +4,7 @@ all: ../build/index.html ../build/events.html ../build/projects.html ../build/ge
 HTMLPARTS=header.html sidebar.html footer.html
 
 ../build/%.html: %.jinja $(HTMLPARTS)
-	python ../scripts/jinja2html.py $< $@ $(HTMLPARTS)
+	python3 ../scripts/jinja2html.py $< $@ $(HTMLPARTS)
 
 copy_files: $(BUILDDIR)/fonts $(BUILDDIR)/events_files $(BUILDDIR)/index_files
 	rsync -ruE files/ ../build/files/
